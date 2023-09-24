@@ -63,3 +63,48 @@
     }
   }
 }
+
+
+@media screen and (max-width: 996px) {
+  .search{
+    .search-box {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .search{
+    .search-box {
+      width: 90%;
+      input {
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .search{
+    .search-box {
+      width: 90%;
+      height: 40px;
+      .search-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      input {
+        width: 150px;
+      }
+      button {
+        width: 80px;
+        font-size: 1rem;
+      }
+    }
+  }
+}

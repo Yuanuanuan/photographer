@@ -75,6 +75,7 @@ ul {
   position: fixed;
   bottom: 70px;
   right: 16px;
+  z-index: 1000;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -117,15 +118,29 @@ ul {
 }
 .main-content nav .change-mode-icon {
   position: absolute;
-  top: 50;
+  top: 50%;
   right: 16px;
-  transform: translateX(-50%);
+  transform: translateY(-50%);
   cursor: pointer;
 }
 .main-content nav .change-mode-icon svg path {
   fill: var(--bg);
 }
 
+@media screen and (max-width: 576px) {
+  .main-content .top-icon {
+    right: 8px;
+  }
+  .main-content nav ul li a {
+    font-size: 1.8rem;
+  }
+  .main-content nav ul li a svg {
+    margin-right: 16px;
+  }
+  .main-content nav .change-mode-icon {
+    right: 8px;
+  }
+}
 .search {
   display: flex;
   justify-content: center;
@@ -195,6 +210,41 @@ ul {
   cursor: pointer;
 }
 
+@media screen and (max-width: 996px) {
+  .search .search-box {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .search .search-box {
+    width: 90%;
+  }
+  .search .search-box input {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .search .search-box {
+    width: 90%;
+    height: 40px;
+  }
+  .search .search-box .search-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .search .search-box .search-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  .search .search-box input {
+    width: 150px;
+  }
+  .search .search-box button {
+    width: 80px;
+    font-size: 1rem;
+  }
+}
 .footer {
   font-family: "Inconsolata", serif;
   display: flex;

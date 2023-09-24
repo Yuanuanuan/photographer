@@ -9,8 +9,9 @@
     position: fixed;
     bottom: 70px;
     right: 16px;
+    z-index: 1000;
     cursor: pointer;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,12 +52,35 @@
     }
     .change-mode-icon {
       position: absolute;
-      top: 50;
+      top: 50%;
       right: 16px;
-      transform: translateX(-50%);
+      transform: translateY(-50%);
       cursor: pointer;
       svg path{
         fill: var(--bg)
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-content {
+    .top-icon {
+      right: 8px;
+    }
+    nav {
+      ul {
+        li {
+          a {
+            font-size: 1.8rem;
+            svg {
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+      .change-mode-icon {
+        right: 8px;
       }
     }
   }
