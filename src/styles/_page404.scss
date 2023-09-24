@@ -1,0 +1,64 @@
+.page404-wrapper {
+  min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inconsolata', serif;
+  .page404 {
+    text-align: center;
+    margin-left: 60px;
+    margin-bottom: 2rem;
+    letter-spacing: 60px;
+    font-size: 16rem;
+    color: #c9c9c9;
+    text-shadow: 0 0 10px #c9c9c9;
+  }
+  .emoji {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 2rem;
+    color: var(--text);
+  }
+  h2 {
+    margin-top: 12px;
+    font-size: 1.15rem;
+    color: var(--text);
+  }
+  button {
+    width: 250px;
+    height: 50px;
+    margin-top: 1.5rem;
+    border: none;
+    background-color: #d59d80;
+    position: relative;
+    font-family: 'Inconsolata', serif;
+    overflow: hidden;
+    cursor: pointer;
+    a {
+      font-size: 1.2rem;
+      color: var(--bg)
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 20px;
+      height: 180%;
+      transform: rotate(-45deg) translate(-35px, -35px);
+      transition: .3s;
+      background-color: #f5f6f730;
+      backdrop-filter: blur(10px);
+    }
+    &:hover::after {
+      transform: rotate(-45deg) translate(200px, 200px);
+    }
+  }
+}

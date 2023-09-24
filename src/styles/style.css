@@ -1,0 +1,353 @@
+@font-face {
+  font-family: "Satisfy";
+  src: url("../fonts/Satisfy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata-VariableFont_wdth,wght.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+body.light-mode {
+  --bg: #fefefe;
+  --input-placeholder: #c9c9c9;
+  --input-text: #666;
+  --text: #222;
+}
+
+body.dark-mode {
+  --bg: #262626;
+  --input-placeholder: #c9c9c9;
+  --input-text: #666;
+  --text: #fefefe;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.morePicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+.morePicture button {
+  height: 3.8rem;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  padding: 0 1rem;
+  color: #d59d80;
+  border-radius: 14px;
+  background-color: var(--bg);
+  border: 1px solid #d59d80;
+  text-shadow: 0 0 10px #ff5500;
+  cursor: pointer;
+}
+.morePicture button:hover {
+  box-shadow: 0 0 20px #d59d80;
+  text-shadow: 0 0 20px #ff5500;
+}
+
+.main-content {
+  background-color: var(--bg);
+  position: relative;
+}
+.main-content .top-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #d59d80;
+  border-radius: 12px;
+  position: fixed;
+  bottom: 70px;
+  right: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-content .top-icon svg {
+  width: 28px;
+  height: 28px;
+}
+.main-content .top-icon svg path {
+  fill: var(--bg);
+}
+.main-content nav {
+  background-color: #d59d80;
+  height: 70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 16px 16px;
+}
+.main-content nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+.main-content nav ul li {
+  padding: 0.5rem 1rem;
+}
+.main-content nav ul li a {
+  font-size: 2.5rem;
+  font-family: "Satisfy", serif;
+  color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-content nav ul li a svg {
+  margin-right: 16px;
+}
+.main-content nav .change-mode-icon {
+  position: absolute;
+  top: 50;
+  right: 16px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.main-content nav .change-mode-icon svg path {
+  fill: var(--bg);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0rem;
+  background-color: var(--bg);
+}
+.search .search-box {
+  width: 45%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--bg);
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 30px;
+}
+.search .search-box .search-icon {
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: #d59d80;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search .search-box .search-icon svg {
+  width: 35px;
+  height: 35px;
+}
+.search .search-box .search-icon svg path {
+  stroke: var(--bg);
+}
+.search .search-box .search-icon svg path:last-child {
+  fill: var(--bg);
+}
+.search .search-box input {
+  flex: 1;
+  font-size: 1.5rem;
+  font-family: "Inconsolata", serif;
+  padding: 0.25rem;
+  border: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--input-text);
+}
+.search .search-box input::-moz-placeholder {
+  color: var(--input-placeholder);
+}
+.search .search-box input::placeholder {
+  color: var(--input-placeholder);
+}
+.search .search-box button {
+  width: 100px;
+  height: 100%;
+  background-color: #d59d80;
+  border-radius: 0 30px 30px 0;
+  font-size: 1.15rem;
+  font-family: "Inconsolata", serif;
+  font-weight: 500;
+  border: none;
+  box-shadow: inset 5px 0 5px var(--bg);
+  color: var(--bg);
+  cursor: pointer;
+}
+
+.footer {
+  font-family: "Inconsolata", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  background-color: #d59d80;
+  border-radius: 16px 16px 0 0;
+  color: var(--bg);
+  height: 60px;
+}
+.footer span {
+  margin: 0 4px;
+  font-size: 1.75rem;
+}
+
+.pictures {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: var(--bg);
+}
+.pictures::after {
+  content: "";
+}
+.pictures .picture {
+  padding: 1rem;
+}
+.pictures .picture .imageContainer {
+  overflow: hidden;
+  border-radius: 36px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+}
+.pictures .picture .imageContainer:hover .detial {
+  opacity: 1;
+}
+.pictures .picture .imageContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease;
+  border-radius: 36px;
+  pointer-events: none;
+}
+.pictures .picture .imageContainer .detial {
+  width: 100%;
+  height: 100%;
+  color: #f5f6f7;
+  background-color: rgba(68, 68, 68, 0.1882352941);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pictures .picture .imageContainer .detial .author {
+  text-align: center;
+}
+.pictures .picture .imageContainer .detial .author h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.pictures .picture .imageContainer .detial .author h1 {
+  font-size: 1.5rem;
+}
+.pictures .picture .imageContainer .detial .download-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Inconsolata";
+}
+.pictures .picture .imageContainer .detial .download-btn a {
+  color: #f0f0f0;
+}
+.pictures .picture .imageContainer .detial .download-btn a:hover {
+  color: #d59d80;
+}
+
+.page404-wrapper {
+  min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inconsolata", serif;
+}
+.page404-wrapper .page404 {
+  text-align: center;
+  margin-left: 60px;
+  margin-bottom: 2rem;
+  letter-spacing: 60px;
+  font-size: 16rem;
+  color: #c9c9c9;
+  text-shadow: 0 0 10px #c9c9c9;
+}
+.page404-wrapper .emoji {
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page404-wrapper h1 {
+  font-size: 2rem;
+  color: var(--text);
+}
+.page404-wrapper h2 {
+  margin-top: 12px;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+.page404-wrapper button {
+  width: 250px;
+  height: 50px;
+  margin-top: 1.5rem;
+  border: none;
+  background-color: #d59d80;
+  position: relative;
+  font-family: "Inconsolata", serif;
+  overflow: hidden;
+  cursor: pointer;
+}
+.page404-wrapper button a {
+  font-size: 1.2rem;
+  color: var(--bg);
+}
+.page404-wrapper button::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 20px;
+  height: 180%;
+  transform: rotate(-45deg) translate(-35px, -35px);
+  transition: 0.3s;
+  background-color: rgba(245, 246, 247, 0.1882352941);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.page404-wrapper button:hover::after {
+  transform: rotate(-45deg) translate(200px, 200px);
+}/*# sourceMappingURL=style.css.map */

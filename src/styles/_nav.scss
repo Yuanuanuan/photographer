@@ -1,0 +1,63 @@
+.main-content {
+  background-color: var(--bg);
+  position: relative;
+  .top-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #d59d80;
+    border-radius: 12px;
+    position: fixed;
+    bottom: 70px;
+    right: 16px;
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 28px;
+      height: 28px;
+      & path {
+        fill: var(--bg)
+      }
+    }
+  }
+  nav {
+    background-color: #d59d80;
+    height: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 16px 16px;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 2rem;
+      li {
+        padding: 0.5rem 1rem;
+        a {
+          font-size: 2.5rem;
+          font-family: 'Satisfy', serif;
+          color: var(--bg);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+    .change-mode-icon {
+      position: absolute;
+      top: 50;
+      right: 16px;
+      transform: translateX(-50%);
+      cursor: pointer;
+      svg path{
+        fill: var(--bg)
+      }
+    }
+  }
+}

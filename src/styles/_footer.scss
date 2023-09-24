@@ -1,0 +1,15 @@
+.footer {
+  font-family: 'Inconsolata', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  background-color: #d59d80;
+  border-radius: 16px 16px 0 0;
+  color: var(--bg);
+  height: 60px;
+  span {
+    margin: 0 4px;
+    font-size: 1.75rem;
+  }
+}

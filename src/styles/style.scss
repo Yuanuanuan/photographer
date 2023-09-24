@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Satisfy';
+  src: url('../fonts/Satisfy-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../fonts/Inconsolata-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+body.light-mode {
+  --bg: #fefefe;
+  --input-placeholder: #c9c9c9;
+  --input-text: #666;
+  --text: #222;
+}
+
+body.dark-mode {
+  --bg: #262626;
+  --input-placeholder: #c9c9c9;
+  --input-text: #666;
+  --text: #fefefe;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.morePicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  button {
+    height: 3.8rem;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    padding: 0 1rem;
+    color: #d59d80;
+    border-radius: 14px;
+    background-color: var(--bg);
+    border: 1px solid #d59d80;
+    text-shadow: 0 0 10px #ff5500;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 20px #d59d80;
+      text-shadow: 0 0 20px #ff5500;
+    }
+  }
+}
+
+@import "./nav";
+@import "./search";
+@import "./footer";
+@import "./picture";
+@import "./page404";

@@ -1,0 +1,73 @@
+.pictures {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: var(--bg);
+  &::after {
+    content: '';
+  }
+  .picture {
+    padding: 1rem;
+    .imageContainer {
+      overflow: hidden;
+      border-radius: 36px;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      cursor: pointer;
+      &:hover .detial {
+        opacity: 1;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease;
+        border-radius: 36px;
+        pointer-events: none;
+      }
+      .detial {
+        width: 100%;
+        height: 100%;
+        color: #f5f6f7;
+        background-color: #44444430;
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: center;
+        transition: opacity .3s ease; 
+        opacity: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .author {
+          text-align: center;
+          h3 {
+            font-size: .9rem;
+            margin-bottom: .5rem;
+          }
+          h1 {
+            font-size: 1.5rem;
+          }
+        }
+        .download-btn {
+          position: absolute;
+          bottom: 1.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          font-family: 'Inconsolata';
+          a {
+            color: #f0f0f0;
+            &:hover {
+              color: #d59d80;
+            }
+          }
+        }
+      }
+    }
+  }
+}
