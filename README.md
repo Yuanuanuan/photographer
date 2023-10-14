@@ -7,7 +7,10 @@
 - 深色模式
 - 可一鍵瀏覽更多照片
 ## 如何使用
-
+複製網址即可
+`
+https://photographer-yuan.netlify.app
+`
 ## 開發工具
 - react 18.2.0
 - react-router-dom 6.4.2
